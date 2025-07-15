@@ -26,6 +26,8 @@ public class BannerAdapter extends RecyclerView.Adapter<BannerAdapter.BannerView
         originalImages.add(R.drawable.banner1);
         originalImages.add(R.drawable.banner2);
         originalImages.add(R.drawable.banner3);
+        originalImages.add(R.drawable.help4);
+        originalImages.add(R.drawable.help5);
 
 
         bannerImages = new ArrayList<>();

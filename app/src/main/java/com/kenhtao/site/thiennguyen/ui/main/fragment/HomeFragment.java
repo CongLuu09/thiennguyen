@@ -1,6 +1,7 @@
 package com.kenhtao.site.thiennguyen.ui.main.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
@@ -24,6 +25,7 @@ import com.kenhtao.site.thiennguyen.data.adapter.BannerAdapter;
 import com.kenhtao.site.thiennguyen.data.adapter.HelpRequestAdapter;
 import com.kenhtao.site.thiennguyen.data.model.HelpRequest;
 import com.kenhtao.site.thiennguyen.data.repository.FakeAuthRepository;
+import com.kenhtao.site.thiennguyen.ui.main.activity.SituationListActivity;
 
 import java.util.List;
 
@@ -141,8 +143,62 @@ public class HomeFragment extends Fragment {
             int index = i;
             item.setOnClickListener(v -> {
                 Log.d("GridMenu", "Click: role = " + role + ", index = " + index);
-                // TODO: Xử lý click tùy theo role & index
+
+                switch (role) {
+                    case "volunteer":
+                        switch (index) {
+                            case 0:
+//                                startActivity(new Intent(getContext(), ScheduleActivity.class));
+                                break;
+                            case 1:
+//                                startActivity(new Intent(getContext(), SupportActivity.class));
+                                break;
+                            case 2:
+//                                startActivity(new Intent(getContext(), MapActivity.class));
+                                break;
+                            case 3:
+//                                startActivity(new Intent(getContext(), NewsActivity.class));
+                                break;
+                        }
+                        break;
+
+                    case "recipient":
+                        switch (index) {
+                            case 0:
+//                                startActivity(new Intent(getContext(), RequestSupportActivity.class));
+                                break;
+                            case 1:
+//                                startActivity(new Intent(getContext(), GuideActivity.class));
+                                break;
+                            case 2:
+//                                startActivity(new Intent(getContext(), MapActivity.class));
+                                break;
+                            case 3:
+//                                startActivity(new Intent(getContext(), ContactActivity.class));
+                                break;
+                        }
+                        break;
+
+                    case "donor":
+                    default:
+                        switch (index) {
+                            case 0:
+                                startActivity(new Intent(getContext(), SituationListActivity.class));
+                                break;
+                            case 1:
+//                                startActivity(new Intent(getContext(), CompanionActivity.class));
+                                break;
+                            case 2:
+//                                startActivity(new Intent(getContext(), EventActivity.class));
+                                break;
+                            case 3:
+//                                startActivity(new Intent(getContext(), MapActivity.class));
+                                break;
+                        }
+                        break;
+                }
             });
+
 
             gridMenu.addView(item);
         }
