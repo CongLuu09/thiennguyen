@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android" tools:ignore="ExtraText">
+    android:angle="135"
+    android:startColor="#42A5F5"
+    android:endColor="#478ED1"
+    android:type="linear"
+</selector>
